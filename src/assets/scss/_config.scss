@@ -1,0 +1,36 @@
+/*
+Vars
+*/
+$black: #010000;
+$white: #ffffff;
+$lightGrey: #e6e6e6;
+$darkGrey: #333;
+$red: #ff1755;
+/*
+Mixins
+*/
+@mixin translateY($e) {
+  -webkit-transform: translateY($e);
+    -moz-transform: translateY($e);
+          transform: translateY($e);
+}
+
+@mixin transition($e) {
+  -webkit-transition:$e;
+    -moz-transition:$e;
+          transition:$e;
+}
+
+/* Fonts -
+
+regular 400
+regular 400 Italic
+bold 700
+bold 700 Italic
+
+*/
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,364 @@
+@import "_config.scss";
+
+@font-face {
+  font-family: 'stylish-font';
+  src: url('../imgs/stylish-font.ttf');
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+#loading{
+  position: absolute;
+  top: 0%;
+  color: white;
+  font-family: 'stylish-font';
+  height: 100%;
+  width: 100%;
+  background: black;
+  @include transition(.2s ease-in-out);
+}
+html{
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+}
+h2{
+  font-family: 'stylish-font';
+  font-size: 7vh;
+}
+
+p{
+  font-family:sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+
+body{
+  height: 100vh;
+  background: black;
+  margin: 0px;
+  padding: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+
+.Navbar{
+  height: 600px;
+  position: -webkit-sticky;
+  position:sticky;
+  top: 10%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 10;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  background:white;
+  div{
+    font-size: 30px;
+    width: 0px;
+    color: grey;
+    height: 20%;
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: -moz-inline-box;
+  }
+  div:hover{
+    color: white;
+    cursor: pointer;
+    @include transition(.2s ease-in-out);
+  }
+}
+
+
+.App{
+  font-family: 'stylish-font';
+}
+
+.Intro{
+  // -webkit-transform-style: preserve-3d;
+  // transform-style: preserve-3d;
+  height: 100%
+
+}
+
+.intro-back {
+  -webkit-transform-style: flat;
+  transform-style: flat;
+  top:0;
+  position: relative;
+  height: 110vh;
+  background: url("../imgs/space.jpg");
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#planet1{
+  color:white;
+  -webkit-transform: translateZ(-0.2px) scale(1.3);
+  transform: translateZ(-0.2px) scale(1.3);
+  background: url("../imgs/planet1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10%; left: 90%;
+  width:50%; height: 50%;
+  div{
+    position: relative;
+    text-align: center;
+    top: 40%;
+    right: 50%;
+  }
+}
+#planet2{
+  -webkit-transform: translateZ(-0.4px) scale(1.3);
+  transform: translateZ(-0.4px) scale(1.3);
+  background: url("../imgs/planet2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 30%; left: 50%;
+  width: 10%; height: 10%;
+}
+#planet3{
+  color:white;
+  -webkit-transform: translateZ(-0.2px) scale(1.3);
+  transform: translateZ(-0.2px) scale(1.3);
+  background: url("../imgs/planet3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0%; left: 0%;
+  width: 30%; height: 30%;
+}
+#nav-message{
+  position: absolute;
+  color:white;
+  top: 30%;
+  left: 40px;
+
+}
+
+.intro-front {
+  -webkit-transform: translateZ(-0.5px) scale(1.5);
+  transform: translateZ(-0.5px) scale(1.5);
+  position: absolute;
+  z-index: 5;
+  top: 30%;
+  width:100%;
+  text-align: center;
+  color: white;
+  font-size: 7vw;
+}
+
+// .Context{
+//   -webkit-transform-style: flat;
+//   transform-style: flat;
+//   background: black;
+// }
+
+.About {
+  text-align: center;
+}
+.Content {
+  padding: 50px !important;
+  position: relative;
+  padding: 20px;
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  .job-title{
+    width: 100%;
+    h2{
+      display:inline-block;
+      margin-right:10px;
+    }
+    h3{
+      display:inline-block;
+      text-align: left;
+    }
+  }
+}
+
+.Title{
+  height: 400px;
+  -webkit-transform-style: flat;
+  transform-style: flat;
+}
+.experience-back {
+  // -webkit-transform: translateZ(-1px) scale(2.5);
+  // transform: translateZ(-1px) scale(2.5);
+  color: white;
+  position: relative;
+  background-color: white;
+  height: 100%;
+  background: url("../imgs/ibm.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.experience-front {
+  // -webkit-transform: translateZ(-0.5px) scale(1.5);
+  // transform: translateZ(-0.5px) scale(1.5);
+  position: absolute;
+  width:100%;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  font-size: 10vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.project-back {
+  // -webkit-transform: translateZ(-1px) scale(2.5);
+  // transform: translateZ(-1px) scale(2.5);
+  color: white;
+  position: relative;
+  background-color: white;
+  height: 100%;
+  background: url("../imgs/codecode.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-front {
+  position: absolute;
+  width:100%;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  font-size: 10vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact-back {
+  // -webkit-transform: translateZ(-1px) scale(2.5);
+  // transform: translateZ(-1px) scale(2.5);
+  color: white;
+  position: relative;
+  background-color: white;
+  height: 100%;
+  background: url("../imgs/space.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-front {
+  position: absolute;
+  width:100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.5);
+
+  h2{
+    padding: 20px;
+    margin: 0px;
+  }
+  h3{
+    font-size: 40px;
+  }
+}
+
+.darken-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.icons{
+  position: relative;
+  width: 380px;
+
+  margin:auto;
+  height: 100px;
+  //background: red;
+  div{
+    width: 75px;
+    margin: 5px;
+    height: 100%;
+    opacity: 0.7;
+    display: inline-block;
+  }
+  div:hover{
+    width: 85px;
+    opacity: 1;
+    cursor: pointer;
+    @include transition(.2s ease-in-out);
+  }
+}
+#linkedin{
+  background: url('../imgs/linkedin-blue.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#github{
+  background: url('../imgs/github-purple.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#resume{
+  background: url('../imgs/resume-blue.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#mail{
+  background: url('../imgs/mail-red.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media(max-width:568px){
+  .experience-back, .project-back, .contact-back{
+    background-attachment: scroll;
+  }
+  .icons{
+    div{
+      opacity: 1;
+    }
+  }
+}
+
+// .experience-img{
+//   position: relative;
+//   width:100%;
+//   // z-index: -5;
+//   background-attachment: fixed;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+
+// .intro-front {
+//   height: 100%;
+//   background-color: grey;
+//   position: relative;
+//   color: white;
+//   font-size: 6vw;
+// }
+// position: absolute;
+// top: 40%;
+// left: 50%;
+// transform: translate(-50%, -50%);
